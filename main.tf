@@ -3,8 +3,8 @@ provider "aws" {
 }
 
 module "ec2_instances" {
-  source  = "github.com/terraform-aws-modules/ec2-instances/aws"
-  version = "2.12.0"
+  source  = "terraform-aws-modules/ec2-instance/aws"
+  version = "~> 2.0"
 
   name           = "sample_instance"
   instance_count = 1
