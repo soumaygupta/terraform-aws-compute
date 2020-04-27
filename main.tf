@@ -11,8 +11,8 @@ module "ec2_instances" {
 
   ami             = var.ami
   instance_type   = var.type
-  security_groups = [var.securitygroup]
-  root_block_device {
+  vpc_security_group_ids = [var.securitygroup]
+  root_block_device = {
     volume_size = 10
   }
   tags = {
