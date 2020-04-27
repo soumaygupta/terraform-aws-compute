@@ -3,11 +3,9 @@ module "ec2_instances" {
   version = "~> 2.0"
 
   name           = "sample_instance"
-  instance_count = 1
-
+  instance_count = 2
   ami             = var.ami
   instance_type   = var.type
-  vpc_security_group_ids = [var.securitygroup]
   tags = {
     Name = var.tag_name
   }
